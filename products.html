@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050505"><title>UNIQUE CHEATS | Premium Product Catalog</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"><link rel="stylesheet" href="style.css">
+<style>
+.store-page{width:min(1120px,92%);margin:0 auto;padding:24px 0 58px;position:relative;z-index:5;flex:1}
+.store-top{display:flex;justify-content:space-between;align-items:center;gap:14px;margin-bottom:28px}
+.store-brand{font:800 clamp(.9rem,2.4vw,1.2rem) 'Orbitron',sans-serif;letter-spacing:1.4px}.store-brand span{color:#e4c46b}
+.back-home{color:#ead18a;text-decoration:none;border:1px solid #b89a4b66;border-radius:8px;padding:8px 12px;font-size:.9rem;transition:.22s}.back-home:hover{background:#d7b75c12;border-color:#d9bb68}
+.ticket-quick-row{display:flex;justify-content:flex-end;margin:-16px 0 22px}
+.create-ticket-link{display:inline-flex;align-items:center;gap:8px;padding:7px 11px;border:1px solid #b89a4b66;border-radius:8px;background:linear-gradient(120deg,#d7b75c12,#ffffff04);color:#ead18a;text-decoration:none;font:600 .78rem 'Rajdhani',sans-serif;letter-spacing:.5px;box-shadow:0 5px 16px #0003;transition:background .2s,border-color .2s,transform .2s}
+.create-ticket-link:hover{background:#d7b75c20;border-color:#d9bb68;transform:translateY(-1px)}
+.create-ticket-link i{font-size:.82rem}
+@media(max-width:520px){.ticket-quick-row{margin:-10px 0 18px}.create-ticket-link{padding:7px 10px}}
+.store-heading{text-align:center;margin:4px auto 24px}.store-heading .eyebrow{font: .66rem 'Share Tech Mono',monospace;letter-spacing:2.8px;color:#d9bd70}
+.store-heading h1{font:700 clamp(1.12rem,3.3vw,2rem) 'Orbitron',sans-serif;letter-spacing:1px;margin:8px 0;color:#f0d78f;text-shadow:0 2px 18px #c5a34b20}
+.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.product-card{position:relative;min-height:148px;padding:17px;border:1px solid #b79a4b45;border-radius:12px;background:linear-gradient(145deg,rgba(27,24,16,.96),rgba(8,8,8,.97));box-shadow:0 10px 28px #0005;overflow:hidden;transition:transform .22s,border-color .22s,box-shadow .22s;cursor:pointer}
+.product-card:before{content:'';position:absolute;top:-70px;right:-50px;width:130px;height:130px;border-radius:50%;background:#dfc36b0c;filter:blur(13px);pointer-events:none}
+.product-card:hover,.product-card:focus-visible{transform:translateY(-3px);border-color:#d8bd6b;box-shadow:0 12px 28px #c7a64a12;outline:none}
+.product-card-top{display:flex;align-items:center;gap:12px;margin-bottom:13px}
+.product-icon{display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;border-radius:9px;color:#ead18a;background:linear-gradient(145deg,#d6b85b20,#a17e2810);border:1px solid #d0b15c55;font-size:.95rem}
+.product-card h2{font:600 clamp(.78rem,1.25vw,.94rem) 'Orbitron',sans-serif;letter-spacing:.25px;color:#f0e5c5;overflow-wrap:anywhere}
+.product-card p{color:#999486;font-size:.88rem;line-height:1.35;margin:0 0 12px}
+.product-actions{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.product-label{color:#bca15c;font: .61rem 'Share Tech Mono',monospace;letter-spacing:1px}
+.details-link{border:1px solid #c6a75055;color:#e4cb81;background:#d3b0520b;border-radius:6px;padding:5px 9px;font:600 .78rem 'Rajdhani',sans-serif;cursor:pointer}
+.details-link:hover{background:#d3b05218;border-color:#d8bd6b}
+.modal-backdrop{position:fixed;inset:0;background:#000b;backdrop-filter:blur(8px);z-index:50;display:none;align-items:center;justify-content:center;padding:18px}
+.modal-backdrop.open{display:flex;animation:fadeIn .18s ease}
+.details-modal{width:min(420px,100%);max-height:85vh;overflow:auto;border:1px solid #c8aa5c66;border-radius:15px;background:linear-gradient(150deg,#17150f,#080808 72%);box-shadow:0 24px 80px #000b,0 0 28px #b9973612;padding:22px;animation:modalUp .24s ease}
+.modal-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;border-bottom:1px solid #bda25230;padding-bottom:14px;margin-bottom:13px}
+.modal-kicker{font: .64rem 'Share Tech Mono',monospace;letter-spacing:2px;color:#bfa65f;margin-bottom:7px}
+.modal-head h2{font:700 1.05rem 'Orbitron',sans-serif;color:#f0d78f;line-height:1.4}
+.modal-close{border:0;background:#ffffff0b;color:#cbbd91;border-radius:7px;width:30px;height:30px;cursor:pointer}
+.price-list{display:grid;gap:8px}
+.price-row{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:10px 12px;border:1px solid #c3a44a20;border-radius:8px;background:#ffffff04;animation:priceIn .35s both}
+.price-row span{color:#bdb6a5;font-size:.98rem}.price-row strong{color:#ead18a;font:700 1rem 'Rajdhani',sans-serif;white-space:nowrap}
+.price-note{font-size:.82rem;color:#8f8a7d;line-height:1.45;margin-top:13px}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes modalUp{from{opacity:0;transform:translateY(10px) scale(.985)}to{opacity:1;transform:none}}@keyframes priceIn{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+@media(max-width:800px){.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.product-grid{grid-template-columns:1fr;gap:10px}.product-card{min-height:0;padding:15px}.store-page{padding-top:18px}.store-top{margin-bottom:22px}.store-heading{margin-bottom:20px}.details-modal{padding:18px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+
+<!-- UNIQUE CHEATS AI Assistant -->
+<section class="uc-ai-launcher" aria-label="Unique Cheats AI Assistant">
+  <div class="uc-ai-launch-copy"><span class="uc-ai-eyebrow">YOUR SMART PRODUCT GUIDE</span><strong>AI Assistant</strong><small>Ask about products, panels & pricing</small></div>
+  <button class="uc-ai-orb" id="ucAiOpen" type="button" aria-label="Open AI Assistant"><span class="uc-ai-dragon">🕷️</span><i class="uc-ai-orb-pulse"></i></button>
+</section>
+<div class="uc-ai-overlay" id="ucAiOverlay" aria-hidden="true">
+ <section class="uc-ai-window" role="dialog" aria-modal="true" aria-labelledby="ucAiTitle">
+  <header class="uc-ai-head"><div class="uc-ai-brand"><span class="uc-ai-mini-dragon">🕷️</span><div><strong id="ucAiTitle">UNIQUE CHEATS AI</strong><small>Multilingual product assistant</small></div></div><button type="button" id="ucAiClose" class="uc-ai-close" aria-label="Close assistant">×</button></header>
+  <div class="uc-ai-language"><label for="ucAiLanguageSearch">LANGUAGE</label><div class="uc-ai-lang-search"><span>⌕</span><input id="ucAiLanguageSearch" type="search" placeholder="Search Bengali, English, Hindi, Tamil…" autocomplete="off"><select id="ucAiLanguage" aria-label="Choose language"></select></div><div class="uc-ai-language-note" id="ucAiLanguageNote">Choose your language to chat or speak.</div></div>
+  <div class="uc-ai-messages" id="ucAiMessages" aria-live="polite"><div class="uc-ai-msg uc-ai-bot">Hey! 👋 Welcome to UNIQUE CHEATS. Ask me about our products, available plans, or how to get support. You can type or use voice.</div></div>
+  <div class="uc-ai-quick"><button type="button" data-uc-prompt="Show me the available products and prices.">Products & prices</button><button type="button" data-uc-prompt="How can I buy a panel?">How to buy</button><button type="button" data-uc-prompt="How do I create a Discord ticket?">Discord ticket</button></div>
+  <form class="uc-ai-compose" id="ucAiForm"><button type="button" id="ucAiVoice" class="uc-ai-mic" aria-label="Start voice input" title="Speak">🎙</button><input id="ucAiInput" placeholder="Ask UNIQUE CHEATS AI…" autocomplete="off" aria-label="Message" required><button type="submit" class="uc-ai-send" aria-label="Send message">➤</button></form>
+  <div class="uc-ai-foot">Voice availability depends on your browser and device. <span>UNIQUE CHEATS</span></div>
+ </section>
+</div>
+<script src="ai-assistant.js"></script>
+
+<div class="ambient-glow ambient-glow-one"></div><div class="ambient-glow ambient-glow-two"></div><div class="grid-overlay"></div>
+<main class="store-page">
+<nav class="store-top"><div class="store-brand">UNIQUE <span>CHEATS</span></div><a class="back-home" href="index.html?skipLoader=1#profile"><i class="fa-solid fa-arrow-left"></i> BACK TO HOME</a></nav>
+<div class="ticket-quick-row"><a class="create-ticket-link" href="https://discord.com/channels/1480120210932629567/1480147781128687707" target="_blank" rel="noopener noreferrer" aria-label="Create a ticket in the Discord server"><i class="fa-solid fa-ticket"></i> CREATE TICKET <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div>
+<section class="store-heading"><div class="eyebrow">PREMIUM COLLECTION</div><h1>UNIQUE PREMIUM PRODUCTS</h1></section>
+<section class="product-grid" id="productGrid" aria-label="Product catalog"></section>
+</main>
+<div class="modal-backdrop" id="detailsBackdrop" role="dialog" aria-modal="true" aria-labelledby="detailsTitle">
+<section class="details-modal"><div class="modal-head"><div><div class="modal-kicker">PRODUCT DETAILS</div><h2 id="detailsTitle">Product</h2></div><button class="modal-close" id="closeDetails" aria-label="Close details"><i class="fa-solid fa-xmark"></i></button></div><div class="price-list" id="priceList"></div><p class="price-note" id="priceNote">Prices are shown in INR.</p></section>
+</div>
+<script>
+const products = [
+ {name:"INTERNAL PANEL",desc:"Internal panel access",icon:"fa-layer-group",prices:[["1 Month","₹500"],["Lifetime","₹2,000"]]},
+ {name:"EXTERNAL PANEL",desc:"External panel access",icon:"fa-window-maximize",prices:[["1 Month","₹500"],["Lifetime","₹1,600"]]},
+ {name:"INTERNAL MAX",desc:"Internal Max access",icon:"fa-microchip",prices:[["1 Month","₹700"],["Lifetime","₹3,000"]]},
+ {name:"SILENT DEVELOP",desc:"Choose your access period",icon:"fa-volume-low",prices:[["7 Days","₹400"],["15 Days","₹590"],["30 Days","₹990"]]},
+ {name:"SILENT KILL",desc:"Choose your access period",icon:"fa-wave-square",prices:[["7 Days","₹500"],["14 Days","₹900"],["30 Days","₹1,450"],["Lifetime","₹2,500"]]},
+ {name:"ULTRA CORE",desc:"Choose your access period",icon:"fa-bolt",prices:[["1 Day","₹100"],["30 Days","₹800"],["Lifetime","₹3,500"]]},
+ {name:"MKILL EXE",desc:"MKILL EXE access",icon:"fa-crosshairs",prices:[["1 Day","₹100"],["3 Days","₹150"],["7 Days","₹400"],["15 Days","₹800"],["30 Days","₹1,400"],["Lifetime","₹3,200"]]},
+ {name:"UID BYPASS",desc:"Choose your access period",icon:"fa-fingerprint",prices:[["7 Days","₹450"],["15 Days","₹900"],["30 Days","₹1,300"],["Lifetime","₹3,000"]]},
+ {name:"LIB BYPASS",desc:"Choose your access period",icon:"fa-fingerprint",prices:[["7 Days","₹450"],["15 Days","₹900"],["30 Days","₹1,300"],["Lifetime","₹3,000"]]},
+ {name:"AIM MKILL APK",desc:"AIM MKILL APK access",icon:"fa-crosshairs",prices:[["1 Day","₹100"],["3 Days","₹150"],["7 Days","₹400"],["15 Days","₹800"],["30 Days","₹1,400"],["Lifetime","₹3,200"]]},
+ {name:"PEAKCORE",desc:"Choose your access period",icon:"fa-bolt",prices:[["1 Day","₹14"],["7 Days","₹400"],["30 Days","₹700"],["Lifetime","₹3,000"]]},
+ {name:"CUSTOM PANEL",desc:"Request access through Discord",icon:"fa-ticket",prices:[],note:"Go to Discord and create ticket."},
+ {name:"PRIVATE MKILL",desc:"Choose your access period",icon:"fa-user-shield",prices:[["1 Day","₹100"],["30 Days","₹800"],["Lifetime","₹3,00,500"]]},
+ {name:"SILENT AIM APK",desc:"Request product access through Discord",icon:"fa-mobile-screen-button",prices:[],note:"Go to Discord and create a ticket to confirm availability and pricing."},
+ {name:"AIMBOT VISIBLE",desc:"Request product access through Discord",icon:"fa-eye",prices:[],note:"Go to Discord and create a ticket to confirm availability and pricing."}
+];
+const grid=document.getElementById('productGrid'), backdrop=document.getElementById('detailsBackdrop'), title=document.getElementById('detailsTitle'), list=document.getElementById('priceList'), note=document.getElementById('priceNote');
+products.forEach((p,i)=>{const card=document.createElement('article');card.className='product-card';card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-label',p.name+' details');card.innerHTML=`<div class="product-card-top"><div class="product-icon"><i class="fa-solid ${p.icon}"></i></div><h2>${p.name}</h2></div><p>${p.desc}</p><div class="product-actions"><span class="product-label">PRODUCT CATEGORY</span><button class="details-link" type="button">Details <i class="fa-solid fa-chevron-right"></i></button></div>`;const open=()=>showDetails(p);card.addEventListener('click',e=>{if(e.target.closest('.details-link')||!e.target.closest('button'))showDetails(p)});card.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();showDetails(p)}});grid.appendChild(card)});
+function showDetails(p){title.textContent=p.name;list.innerHTML='';if(p.prices.length){p.prices.forEach(([period,price],i)=>{const row=document.createElement('div');row.className='price-row';row.style.animationDelay=(i*65)+'ms';row.innerHTML=`<span>${period}</span><strong>${price}</strong>`;list.appendChild(row)});note.textContent='All prices are in INR (₹).';}else{const row=document.createElement('div');row.className='price-row';row.innerHTML='<span>Next step</span><strong>Discord Ticket</strong>';list.appendChild(row);note.textContent=p.note;}backdrop.classList.add('open');document.getElementById('closeDetails').focus()}
+function closeDetails(){backdrop.classList.remove('open')}
+document.getElementById('closeDetails').addEventListener('click',closeDetails);backdrop.addEventListener('click',e=>{if(e.target===backdrop)closeDetails()});document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDetails()});
+</script>
+</body></html>

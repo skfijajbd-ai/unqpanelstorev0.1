@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIQUE CHEATS | Official Hub</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="ambient-glow ambient-glow-one"></div>
+    <div class="ambient-glow ambient-glow-two"></div>
+    <div class="grid-overlay"></div>
+
+    <div id="hacking-loader">
+        <canvas id="matrix-canvas"></canvas>
+        <div class="scanlines"></div>
+        <div class="glitch-vignette"></div>
+
+        <div class="loader-terminal-full">
+            <div class="terminal-header-full">
+                <div class="header-left">
+                    <span class="dot red-pulse"></span>
+                    <span class="dot red-pulse-delayed1"></span>
+                    <span class="dot red-pulse-delayed2"></span>
+                    <span class="terminal-title data-glitch" data-text="UNIQUE_CHEATS // VINAY.DLL">UNIQUE_CHEATS // VINAY.DLL</span>
+                </div>
+                <div class="header-right"><i class="fa-solid fa-triangle-exclamation"></i> GOLD EDITION • INITIALIZING</div>
+            </div>
+            
+            <div class="terminal-body-full" id="loader-logs"></div>
+            
+            <div class="loader-footer-full">
+                <div class="progress-status-container">
+                    <span class="status-icon"><i class="fa-solid fa-bolt"></i></span>
+                    <div class="progress-status-text">PREPARING PREMIUM EXPERIENCE: <span class="loading-blink" id="status-string">INJECTING PACKETS...</span></div>
+                </div>
+                <div class="loader-progress-container-full">
+                    <div class="loader-progress-bar-full" id="loader-progress"></div>
+                    <div class="loader-percentage-full" id="loader-percentage">0%</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="background-stage" aria-hidden="true">
+        <video id="bgVideo" autoplay muted loop playsinline preload="auto">
+            <source src="assets/background.mp4" type="video/mp4">
+        </video>
+        <div class="background-shade"></div>
+        <div class="background-vignette"></div>
+    </div>
+
+    <div id="particle-container"></div>
+    
+    <audio id="bgMusic" preload="auto" autoplay playsinline muted src="songs/01-Rab-Ne-Mujhko-Bola-Ab-Tu-Mang-Le-Kuch-Bhi.mp3"></audio>
+
+    <header class="animate-fade-in">
+        <div class="brand-logo data-glitch" data-text="UNIQUE ">UNIQUE <span>CHEATS</span></div>
+        <div class="music-bar">
+            <button class="audio-btn vol-btn" id="volDownBtn" title="Volume Down" aria-label="Volume Down"><i class="fa-solid fa-volume-low"></i></button>
+            <button class="audio-btn" id="prevBtn" title="Previous" aria-label="Previous"><i class="fa-solid fa-backward"></i></button>
+            
+            <div class="music-info">
+                <span id="trackName">UNIQUE SPECIAL</span>
+                <small id="artistName">Official Audio</small>
+            </div>
+            
+            <button class="audio-btn play-btn" id="musicBtn" title="Play / Pause" aria-label="Play / Pause"><i class="fa-solid fa-play"></i></button>
+            <button class="audio-btn" id="nextBtn" title="Next" aria-label="Next"><i class="fa-solid fa-forward"></i></button>
+            <button class="audio-btn vol-btn" id="volUpBtn" title="Volume Up" aria-label="Volume Up"><i class="fa-solid fa-volume-high"></i></button>
+
+            <div class="mixer-module" title="Live audio visualizer">
+                <div class="mixer-label"><i class="fa-solid fa-wave-square"></i> REMIXER <span id="volumeValue">60%</span></div>
+                <canvas id="remixerCanvas" width="170" height="42" aria-label="Live music visualizer"></canvas>
+            </div>
+        </div>
+        <div class="status-badge"><span class="pulse-node"></span> Online</div>
+    </header>
+
+    <div class="main-workspace">
+        <div class="left-panel">
+            <div class="terminal-tag animate-text-pop">// NO EXCUSES. NO LIMITS.</div>
+            <div class="main-title animate-text-glow">UNIQUE <span>!!</span><br>CHEATS</div>
+            <div class="branding-sub animate-text-reveal">[ UNIQUE ON TOP  ]</div>
+            <div class="motto-box animate-text-fade">"While others sleep, I build. <br>While others talk, I execute."</div>
+            <div class="action-cluster animate-buttons">
+                <a href="https://youtube.com/@uniquevinay-7?si=gVaHIHBmPAp76KMk" target="_blank" class="trigger-btn btn-fill sound-btn">YouTube <i class="fa-brands fa-youtube"></i></a>
+                <a href="https://discord.gg/qTgxAY4dTR" target="_blank" class="trigger-btn btn-border sound-btn">Discord Hub</a>
+            </div>
+        </div>
+
+        <div class="right-panel">
+            <div class="profile-container animate-card-rise">
+                <div class="identity-card">
+                    <div class="avatar-frame">
+                        <img 
+                            id="discordAvatar" 
+                            src="assets/profile.jpg" 
+                            alt="Unique Cheats Logo"
+                            onerror="this.src='assets/profile.jpg';"
+                        />
+                        <span class="live-status-dot online" id="statusDot"></span>
+                    </div>
+                    <h2 class="animate-text-pop">Unique Cheats <i class="fa-solid fa-lock"></i></h2>
+                    <div class="user-tag" id="discordTag">vinay.dll</div>
+                </div>
+                <div class="badge-grid">
+                    <span class="badge-node animate-pulse-slow">UNIQUE </span>
+                    <span class="badge-node animate-pulse-slow"><i class="fa-solid fa-shield-halved"></i> !!</span>
+                    <span class="badge-node animate-pulse-slow"><i class="fa-solid fa-bolt"></i> CHEATS</span>
+                </div>
+                <div class="separator"></div>
+                <div class="meta-details">
+                    <h3 class="animate-text-reveal">About Me</h3>
+                    <p id="customStatus" class="animate-text-fade">OWNER OF :- UNIQUE CHEATS.</p>
+                    
+                    <h3 class="animate-text-reveal">YouTube Channel</h3>
+                    <p class="animate-text-fade"><a href="https://youtube.com/@uniquevinay-7?si=gVaHIHBmPAp76KMk" target="_blank" class="meta-link sound-btn">Visit Official YouTube</a></p>
+                    
+                    <h3 class="animate-text-reveal">Discord Server</h3>
+                    <p class="animate-text-fade"><a href="https://discord.gg/qTgxAY4dTR" target="_blank" class="meta-link sound-btn">discord.gg/qTgxAY4dTR</a></p>
+                    
+                    <h3 class="animate-text-reveal">Skills</h3>
+                    <p class="animate-text-fade">Python / JAVA / C# </p>
+                </div>
+                <button class="action-connect sound-btn" id="joinServerBtn">Join Server <i class="fa-brands fa-discord"></i></button>
+            </div>
+        </div>
+    </div>
+
+
+<!-- UNIQUE CHEATS AI Assistant -->
+<section class="uc-ai-launcher" aria-label="Unique Cheats AI Assistant">
+  <div class="uc-ai-launch-copy"><span class="uc-ai-eyebrow">YOUR SMART PRODUCT GUIDE</span><strong>AI Assistant</strong><small>Ask about products, panels & pricing</small></div>
+  <button class="uc-ai-orb" id="ucAiOpen" type="button" aria-label="Open AI Assistant"><span class="uc-ai-dragon">🕷️</span><i class="uc-ai-orb-pulse"></i></button>
+</section>
+<div class="uc-ai-overlay" id="ucAiOverlay" aria-hidden="true">
+ <section class="uc-ai-window" role="dialog" aria-modal="true" aria-labelledby="ucAiTitle">
+  <header class="uc-ai-head"><div class="uc-ai-brand"><span class="uc-ai-mini-dragon">🕷️</span><div><strong id="ucAiTitle">UNIQUE CHEATS AI</strong><small>Multilingual product assistant</small></div></div><button type="button" id="ucAiSoundToggle" class="uc-ai-sound-toggle" aria-pressed="false" title="Turn AI voice on">🔇 Voice off</button><button type="button" id="ucAiClose" class="uc-ai-close" aria-label="Close assistant">×</button></header>
+  <div class="uc-ai-language"><label for="ucAiLanguageSearch">LANGUAGE</label><div class="uc-ai-lang-search"><span>⌕</span><input id="ucAiLanguageSearch" type="search" placeholder="Search Bengali, English, Hindi, Tamil…" autocomplete="off"><select id="ucAiLanguage" aria-label="Choose language"></select></div><div class="uc-ai-language-note" id="ucAiLanguageNote">Choose your language to chat or speak.</div></div>
+  <div class="uc-ai-messages" id="ucAiMessages" aria-live="polite"><div class="uc-ai-msg uc-ai-bot">Hey! 👋 Welcome to UNIQUE CHEATS. Ask me about our products, available plans, or how to get support. You can type or use voice.</div></div>
+  <div class="uc-ai-quick"><button type="button" data-uc-prompt="Show me the available products and prices.">Products & prices</button><button type="button" data-uc-prompt="How can I buy a panel?">How to buy</button><button type="button" data-uc-prompt="How do I create a Discord ticket?">Discord ticket</button></div>
+  <form class="uc-ai-compose" id="ucAiForm"><button type="button" id="ucAiVoice" class="uc-ai-mic" aria-label="Start voice input" title="Speak">🎙</button><input id="ucAiInput" placeholder="Ask UNIQUE CHEATS AI…" autocomplete="off" aria-label="Message" required><button type="submit" class="uc-ai-send" aria-label="Send message">➤</button></form>
+  <div class="uc-ai-foot">Voice availability depends on your browser and device. <span>UNIQUE CHEATS</span></div>
+ </section>
+</div>
+<script src="ai-assistant.js"></script>
+
+    <div class="store-entry-wrap animate-fade-in">
+        <a class="store-entry-btn sound-btn" href="products.html"><span class="store-entry-kicker">EXPLORE THE COLLECTION</span><strong>UNIQUE CHEATS PRODUCT STORE</strong><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+    </div>
+
+    <div class="metric-footer animate-fade-in">
+        <div class="metric-node"><div class="metric-val">2,200+</div><div class="metric-lbl">Projects</div></div>
+        <div class="metric-node"><div class="metric-val">5+</div><div class="metric-lbl">Years</div></div>
+        <div class="metric-node"><div class="metric-val">7000+</div><div class="metric-lbl">Clients</div></div>
+        <div class="metric-node"><div class="metric-val">EXPERTS</div><div class="metric-lbl">Dedicated Team</div></div>
+        <div class="metric-node"><div class="metric-val">100%</div><div class="metric-lbl">Committed</div></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
